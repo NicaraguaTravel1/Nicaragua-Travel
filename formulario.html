@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<?php
+    $nombre = $_POST['nombre'];
+    $password = $_POST['password'];
+    $genero = $_POST['genero'];
+    $email = $_POST['email'];
+    $materia = $_POST['materia'];
+    $telefono = $_POST['telefono'];
+    
+    if(!empty($nombre) && !empty($password) && !empty($genero) && !empty($email) && !empty($materia) && !empty($telefono) ){
+    
+    $host ="localhost";
+    $dbusername = "root";
+    $dbpassword = " ";
+    $bdname = "viajeros",
+    
+    $conn = new mysqli($host,$dbusername,$dbpassword,$bdname);
+    if(mysqli_connect_error()){
+        die('connect error('.mysqli_connect_errno().')'.mysqli_connectio_error()); 
+    }
+    
+    else{
+        $SELECT = "SELECT telefono from viajeros where telefono = ? limit 1 ";
+        $INSERT = "INSERT INTO viajeros (nombre,password,genero,email,materia,telefono)values(?,?,?,?,?,?)";
+    
+        $stmt = $conn->prepare($SELECT);
+        $stmt ->bind_param("i", $telefono);
+        $stmt ->execute();
+        $stmt ->bind_result($telefono);
+        $stmt ->store_result();
+        $rnum =$stmt->num-romws;
+        if($rnum ==0){
+            $stmt ->Close();
+            $stmt = $conn->prepare($INSERT);
+            $stmt ->bind_param("sssssi", $nombre,$password,$genero,$email,$materia,$telefono);
+            $stmt ->execute();
+            echo "Compra completada.";
+        }
+        else{
+            echo "Alguien registro este numero anteriormente"
+        }
+        $stmt->close();
+        $conn->close();
+    
+    }
+    
+    }
+    else{
+        echo "Todos los datos son necesarios";
+        die();
+    }
+    , initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>

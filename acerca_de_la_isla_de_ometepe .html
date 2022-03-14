@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nicaragua Travel - Isla de ometepe</title>
+    <link rel="shortcut icon" href="nicaragua.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="stilos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="https://unpkg.com/scrollreveal"></script>
+  </head>
+  <body>
+
+    <header>
+      <a href="#" class="brand">Nicaragua Travel</a>
+      <div class="menu-btn"></div>
+      <div class="navigation">
+        <div class="navigation-items">
+          <a href="index.html">Inicio</a>
+          <a href="Destinos_Turisticos_Nicaragua.html">Destinos Turisticos</a>
+          <a href="#">Cultura</a>
+          <a href="#">Flora y Fauna</a>
+          <a href="#">Contacto</a>
+        </div>
+      </div>
+    </header>
+
+    <section class="sec-01">
+      <div class="container">
+        <h2 class="main-title">Isla de ometepe un destino paradisiaco</h2>
+        <div class="content">
+          <div class="image">
+            <video src="Ometepe.mp4" loop controls autoplay></video>
+          </div>
+          <div class="text-box">
+            <h3>¿Que ofrece la isla de ometepe?</h3>
+            <p>Promovida como un “Oasis de Paz”, Ometepe ofrece además atractivos como la Reserva Ecológica de Charco Verde, Playa Santo Domingo, Punta Jesús María, Cascada de San Ramón, y el Ojo de Agua, entre otros.</p>
+          </div>
+        </div>
+        <!-- iconos
+          <div class="media-icons">
+          <a href="#" class="icon"><i class="fab fa-facebook"></i></a>
+          <a href="#" class="icon"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="icon"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="icon"><i class="fab fa-pornhub"></i></a>
+        </div>
+      </div>
+        -->
+        
+    </section>
+    <section class="sec-02">
+      <div class="container">
+        <h3 class="section-title">¿Que es el ojo de agua y porque sera de lo que todos estan halando?</h3>
+        <div class="content">
+          <div class="image">
+            <video src="ometepeof.mp4" loop controls autoplay muted></video>
+          </div>
+          <div class="info">
+            
+            <p>Es una piscina natural, en cuya transparencia se puede ver el fondo. Se alimenta de las aguas que emanan los suelos volcánicos y de las aguas del río Buen Suceso. Rodeada de bosque y del canto de las aves es un lugar ideal para darse un chapuzón.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="sec-03">
+      <div class="container">
+        <h3 class="section-title">¡Esperamos y lo distrutes!</h3>
+        <div class="content">
+         
+          <div class="image">
+            <video src="Isla Ometepe.mp4" loop controls autoplay muted></video>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script type="text/javascript">
+      //js de la navegacion del video
+      const menuBtn = document.querySelector(".menu-btn");
+      const navigation = document.querySelector(".navigation");
+  
+      menuBtn.addEventListener("click", () => {
+        menuBtn.classList.toggle("active");
+        navigation.classList.toggle("active");
+      });
+  
+      //El scritp del video 
+      const btns = document.querySelectorAll(".nav-btn");
+      const slides = document.querySelectorAll(".video-slide");
+      const contents = document.querySelectorAll(".content");
+  
+      var sliderNav = function(manual){
+        btns.forEach((btn) => {
+          btn.classList.remove("active");
+        });
+  
+        slides.forEach((slide) => {
+          slide.classList.remove("active");
+        });
+  
+        contents.forEach((content) => {
+          content.classList.remove("active");
+        });
+  
+        btns[manual].classList.add("active");
+        slides[manual].classList.add("active");
+        contents[manual].classList.add("active");
+      }
+  
+      btns.forEach((btn, i) => {
+        btn.addEventListener("click", () => {
+          sliderNav(i);
+        });
+      });
+      </script>
+
+    <script>
+      //para revelar
+      ScrollReveal({
+        //el reset,
+        distance: '60px',
+        duration: 2500,
+        delay: 400
+      });
+
+      //js de la animacion no cambiar
+      ScrollReveal().reveal('.main-title, .section-title', { delay: 500, origin: 'left' });
+      ScrollReveal().reveal('.sec-01 .image, .info', { delay: 600, origin: 'bottom' });
+      ScrollReveal().reveal('.text-box', { delay: 700, origin: 'right' });
+      ScrollReveal().reveal('.media-icons i', { delay: 500, origin: 'bottom', interval: 200 });
+      ScrollReveal().reveal('.sec-02 .image, .sec-03 .image', { delay: 500, origin: 'top' });
+      ScrollReveal().reveal('.media-info li', { delay: 500, origin: 'left', interval: 200 });
+    </script>
+
+  </body>
+</html>
+      

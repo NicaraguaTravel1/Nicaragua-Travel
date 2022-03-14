@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="nicaragua.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="mas.css">
+    <title>Nicaragua Travel | Isla de Ometepe</title>
+</head>
+<body>
+
+  <header>
+    <a href="#" class="brand">Nicaragua Travel</a>
+      <div class="menu-btn"></div>
+      <div class="navigation">
+        <div class="navigation-items">
+          <a href="index.html">Inicio</a>
+          <a href="Destinos_Turisticos_Nicaragua.html">Destinos Turisticos</a>
+          <a href="#">Cultura</a>
+          <a href="Flora y fauna.html">Flora y Fauna</a>
+          <a href="Acerca_de.html">Acerca de</a>
+      </div>
+    </div>
+  </header> 
+  <br><br>
+    <div class="page-wrap">
+        <main class="page-main">
+          <h1>Isla de Ometepe</h1>
+          <article>
+            <section class="left-side">
+              <h2>¿Porque ir? </h2>
+              <div>
+                <div>
+                  <p>Illo numquam, sapiente neque repellendus facere amet doloribus asperiores quia eum? Sunt vero amet neque vel? Tempora, nulla voluptatum amet autem culpa magnam debitis! Dolores esse quam amet nobis ut.</p>
+                  <p>Sunt excepturi in nostrum, fugiat veritatis ab sit sequi nemo aperiam deserunt temporibus, dolorem ex adipisci autem. Quasi, iure fugiat! Nulla amet doloribus velit nam tempora, soluta consequatur doloremque omnis?</p>
+                  <p> Aenean iaculis odio et eleifend elementum. Pellentesque porta lacus sit amet ligula tristique ornare. Ut euismod suscipit enim. Morbi eu molestie odio. Nullam pellentesque bibendum magna non aliquet. Praesent commodo metus ut dapibus sollicitudin. Etiam tristique arcu et risus venenatis egestas. Mauris quis feugiat leo. Mauris scelerisque eleifend risus a suscipit. Praesent commodo pharetra vehicula. Praesent imperdiet luctus ex eget consectetur. Sed facilisis lobortis dolor quis scelerisque. Pellentesque porta orci nec viverra semper.</p>
+                </div>
+                <div>
+                </div>
+              </div>
+            </section>
+            <section class="right-side">
+              <figure>
+                <img src="https://images.pexels.com/photos/5274755/pexels-photo-5274755.jpeg?cs=srgb&dl=pexels-roberto-zuniga-5274755.jpg&fm=jpg" alt="a small part of a redwood forest with the sun beaming through the trees.">
+                <figcaption>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos laborum cumque incidunt, enim ipsa dicta? Porro illo doloribus, consectetur eum exercitationem sit ipsam, est nesciunt maxime, eius animi dolor? Harum.</figcaption>
+              </figure>
+            </section>
+          </article>
+        </main>
+        
+      </div>
+
+      <script type="text/javascript">
+        //js de la navegacion del video
+        const menuBtn = document.querySelector(".menu-btn");
+        const navigation = document.querySelector(".navigation");
+    
+        menuBtn.addEventListener("click", () => {
+          menuBtn.classList.toggle("active");
+          navigation.classList.toggle("active");
+        });
+    
+        //El scritp del video 
+        const btns = document.querySelectorAll(".nav-btn");
+        const slides = document.querySelectorAll(".video-slide");
+        const contents = document.querySelectorAll(".content");
+    
+        var sliderNav = function(manual){
+          btns.forEach((btn) => {
+            btn.classList.remove("active");
+          });
+    
+          slides.forEach((slide) => {
+            slide.classList.remove("active");
+          });
+    
+          contents.forEach((content) => {
+            content.classList.remove("active");
+          });
+    
+          btns[manual].classList.add("active");
+          slides[manual].classList.add("active");
+          contents[manual].classList.add("active");
+        }
+    
+        btns.forEach((btn, i) => {
+          btn.addEventListener("click", () => {
+            sliderNav(i);
+          });
+        });
+        </script>
+    
+</body>
+</html>
