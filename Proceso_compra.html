@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="tienda.css">
+    <script
+    src="https://kit.fontawesome.com/7e5b2d153f.js"
+    crossorigin="anonymous"
+  ></script>
+  <script defer src="index.js"></script>
+    <link rel="shortcut icon" href="nicaragua.jpg">
+    <title>Nicaragua Travel | Comprar Voletos</title>
+</head>
+<header>
+
+    <a href="#" class="brand">Nicaragua Travel</a>
+    <div class="menu-btn"></div>
+    <div class="navigation">
+      <div class="navigation-items">
+        <a href="index.html">Inicio</a>
+        <a href="Destinos_Turisticos_Nicaragua.html">Destinos Turisticos</a>
+        <a href="#">Cultura</a>
+        <a href="Flora y fauna.html">Flora y Fauna</a>
+        <a href="#">Acerca de</a>
+          </div>
+        </div>
+    </header>
+
+<body>
+
+
+ 
+    <!-- Seccion de tienda -->
+    <section class="store">
+        <div class="container">
+            <div class="items">
+                <div class="row">
+
+                    <div class="col-12 col-md-6">
+                        <div class="item shadow mb-4">
+                            <h3 class="item-title">Leon</h3>
+                            <img class="item-image" src="leon.jpg">
+
+                            <div class="item-details">
+                                <h4 class="item-price">39.99€</h4>
+                                <button class="item-button btn btn-primary addToCart">AÑADIR AL CARRITO</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <div class="item shadow mb-4">
+                            <h3 class="item-title">Masaya</h3>
+
+                            <img class="item-image" src="masaya.jpg">
+
+                            <div class="item-details">
+                                <h4 class="item-price">39.99€</h4>
+                                <button class="item-button btn btn-primary addToCart">AÑADIR AL CARRITO</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12 col-md-6">
+                        <div class="item shadow mb-4">
+                            <h3 class="item-title">Isla de Ometepe</h3>
+
+                            <img class="item-image" src="ometepe.jpg">
+
+                            <div class="item-details">
+                                <h4 class="item-price">99.99€</h4>
+                                <button class="item-button btn btn-primary addToCart">AÑADIR AL CARRITO</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <div class="item shadow mb-4">
+                            <h3 class="item-title">Castillo Inmaculada</h3>
+
+                            <img class="item-image" src="cras.jpg">
+
+                            <div class="item-details">
+                                <h4 class="item-price">149.99€</h4>
+                                <button class="item-button btn btn-primary addToCart">AÑADIR AL CARRITO</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-md-6">
+                        <div class="item shadow mb-4">
+                            <h3 class="item-title">Corn Island</h3>
+
+                            <img class="item-image" src="corn.jpg">
+                            <div class="item-details">
+                                <h4 class="item-price">199.99€</h4>
+                                <button class="item-button btn btn-primary addToCart">AÑADIR AL CARRITO</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <div class="item shadow mb-4">
+                            <h3 class="item-title">Cerro Negro</h3>
+
+                            <img class="item-image" src="Cerro.png">
+                            <div class="item-details">
+                                <h4 class="item-price">39.99€</h4>
+                                <button class="item-button btn btn-primary addToCart">AÑADIR AL CARRITO</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- fin seccion de tienda -->
+    <!-- Incio del carrito -->
+    <section class="shopping-cart">
+        <div class="container">
+            <h1 class="text-center">CARRITO</h1>
+            <hr>
+            <div class="row">
+                <div class="col-6">
+                    <div class="shopping-cart-header">
+                        <h6>Destino</h6>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="shopping-cart-header">
+                        <h6 class="text-truncate">Precio</h6>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="shopping-cart-header">
+                        <h6>Boletos</h6>
+                    </div>
+                </div>
+            </div>
+            <!-- ? items inicio -->
+            <div class="shopping-cart-items shoppingCartItemsContainer">
+            </div>
+            <!-- ? fin items -->
+
+            <!-- Comienza el total -->
+            <div class="row">
+                <div class="col-12">
+                    <div class="shopping-cart-total d-flex align-items-center">
+                        <p class="mb-0">Total</p>
+                        <p class="ml-4 mb-0 shoppingCartTotal">0€</p>
+                        <div class="toast ml-auto bg-info" role="alert" aria-live="assertive" aria-atomic="true"
+                            data-delay="2000">
+                            <div class="toast-header">
+                                <span>✅</span>
+                                <strong class="mr-auto ml-1 text-secondary">Elemento en el carrito</strong>
+                                <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="toast-body text-white">
+                                Se aumentó correctamente la cantidad
+                            </div>
+                        </div>
+                        <button class="btn btn-success ml-auto comprarButton" type="button" data-toggle="modal"
+                            data-target="#comprarModal">Comprar</button>
+                    </div>
+                </div>
+            </div>
+
+            <!--  fin total -->
+
+            <!-- El modal del finalizacion -->
+            <div class="modal fade" id="comprarModal" tabindex="-1" aria-labelledby="comprarModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="comprarModalLabel">Gracias por su compra</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <p>Si dios quiere algun dia tendra su boleto</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- fin -->
+
+
+        </div>
+
+    </section>
+
+
+
+
+
+
+
+
+    <!-- js -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+
+    <script src="./tienda.js"></script>
+
+    <script type="text/javascript">
+        //js de la navegacion del video
+        const menuBtn = document.querySelector(".menu-btn");
+        const navigation = document.querySelector(".navigation");
+    
+        menuBtn.addEventListener("click", () => {
+          menuBtn.classList.toggle("active");
+          navigation.classList.toggle("active");
+        });
+    
+        //El scritp del video 
+        const btns = document.querySelectorAll(".nav-btn");
+        const slides = document.querySelectorAll(".video-slide");
+        const contents = document.querySelectorAll(".content");
+    
+        var sliderNav = function(manual){
+          btns.forEach((btn) => {
+            btn.classList.remove("active");
+          });
+    
+          slides.forEach((slide) => {
+            slide.classList.remove("active");
+          });
+    
+          contents.forEach((content) => {
+            content.classList.remove("active");
+          });
+    
+          btns[manual].classList.add("active");
+          slides[manual].classList.add("active");
+          contents[manual].classList.add("active");
+        }
+    
+        btns.forEach((btn, i) => {
+          btn.addEventListener("click", () => {
+            sliderNav(i);
+          });
+        });
+        </script>
+
+</body>
+
+</html>
